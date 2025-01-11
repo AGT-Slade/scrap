@@ -147,7 +147,7 @@ section {
 .hero {
     border: 1px none red;
     height: 500px;
-    background-image: url(../img/sword.jpg);
+    background-image: url(./img/sword.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
