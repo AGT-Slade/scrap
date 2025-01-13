@@ -5,10 +5,11 @@
     margin-block-start: 0;
     margin-block-end: 0;
     list-style-type: none;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: rgba(53, 6, 141, 0.753);
+    /* background-color: rgba(53, 6, 141, 0.753); */
     height: 100vh;
 }
 
@@ -19,36 +20,86 @@ section {
 }
 
 .banner {
-    padding: 0 2px;
+    background-color: rgb(102, 68, 167, 1);
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     flex-wrap: nowrap;
+    padding: 5px 10px;
+    column-gap: 10px;
 }
 
-.banner > marquee {
+
+.banner > .marquee-container {
+    flex-grow: 1; /* Allow the container to grow and fill available space */
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px 0;
+    position: relative;
+}
+
+
+.banner > .marquee-container > .scrolling-container {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     text-align: center;
+    animation: scroll-text 15s linear infinite;
+    transition: opacity 0.20s ease, animation-play-state 0.20s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+
+}
+
+@keyframes scroll-text {
+    from { transform: translateX(99%); }
+    to { transform: translateX(-100%); }
+} 
+
+.banner > .marquee-container > .scrolling-container:hover {
+    animation-play-state: paused;
+   
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.banner > .marquee-container > .scrolling-container > .scrolling-text {
+    background-color: black;
+    color: rgb(125, 247, 77);
+    border-radius: 50px;
+    padding: 5px 10px;
     font-size: 1rem;
-    padding-left: 10px;
-    color: antiquewhite;
-    
+    display: inline-block;
 }
 
 .banner > ul {
     display: flex;
     justify-content:flex-end;
+    align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
+   
 }
 
 
 .banner > ul > li {
-    margin: 0 5px;
+    margin: 0px 2px;
+    font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
+    color: rgb(125, 247, 77);
+    border-color: rgb(125, 247, 77);
+    background-color: black;
+    padding: 5px 7px;
+    border-radius: 50px;
+    border: 1px solid rgb(125, 247, 77);
+    text-align: center;
 }
 
 .navbar {
-    background-color: rgba(64, 37, 185, 0.26);
+    background-color: rgba(93, 60, 171,1);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -154,11 +205,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+   
 
 }
 
 .hero > .hero-info {
-    background-color: rgba(18, 95, 139, 0.363);
+    background-color: rgba(5, 158, 247, 0.2);
     width: 90%;
     max-width: 1000px ;
     padding: 20px;
@@ -193,6 +245,8 @@ section {
 
 .hero-info > .wrapper > .image-wrapper > img {
     width: 100%;
+    filter: contrast(100%);
+    background-blend-mode: lighten;
     
 }
 
