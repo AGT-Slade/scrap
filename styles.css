@@ -123,6 +123,7 @@ section {
     background-position: top;
     background-attachment: fixed;
     background-size: contain;
+    
 }
 
 /* ===== Navbar Component ===== */
@@ -131,6 +132,7 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
+    padding: 15px 0;
 }
 
 .brand-section {
@@ -213,22 +215,22 @@ section {
 
 /* ===== Hero Section ===== */
 .hero {
-    background-image: url(./img/sword.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: url(./img/hero-wallpaper.jpg);
+    background-position:center;
+    background-attachment:scroll;
+    background-size:cover;
     
 }
 
 .hero-info {
-    background-color: rgba(5, 158, 247, 0.2); /* Semi-transparent background */
+    background-color: rgba(0, 4, 7, 0.705); /* Semi-transparent background */
     display: flex;
     flex-wrap: wrap;
     margin: 20px auto;
     align-items: center;
     justify-content: center;
     padding: 20px; /* Consistent padding */
-    max-width: 800px; /* Limit content width for better readability */
+    max-width: 725px; /* Limit content width for better readability */
     color: var(--background-light);
     text-align: center;
     border-radius: 10px; /* Rounded corners */
@@ -749,6 +751,6 @@ section {
     }
 
     .nav-links {
-        padding: 10px 0;
+        padding-top: 10px;
     }
 }
